@@ -1,10 +1,9 @@
 import json
 import os
 import pandas as pd
-from tabulate import tabulate
 
-def redif2df(redif_file):
-    ''' A function that gets a ReDIF input and converts it to a Pandas DataFrame'''
+def redif2csv(redif_file):
+    ''' A function that gets a ReDIF input and converts it to a CSV'''
     articles=[]
     article={}
     creators=[]
@@ -42,8 +41,9 @@ def redif2df(redif_file):
     jd = unicode(jd, 'utf-8',errors='ignore')
     jl=json.loads(jd,encoding='utf-8')
     df=pd.DataFrame(jl)
+    csv_file=redif_file.replace('.rdf','.csv')
+    df.to_csv(csv_file,encoding='utf-8')
     return (df)
-
 #Run: put any number of ReDIF files in the current folder 
 #Example: isre-0101-1704-BOM.rdf
 for file_name in os.listdir('.'):
@@ -53,8 +53,7 @@ for file_name in os.listdir('.'):
             content = f.readlines()
         # you may also want to remove whitespace characters like `\n` at the end of each line
         content = [x.strip() for x in content] 
-        df=jsonld_file=redif2df(file_name)
+        df=jsonld_file=redif2csv(file_name)
 
-#check the first element of your json
-print tabulate(df.head(2), tablefmt='psql')
-
+#check the first rows of your CSV
+df.head(2)
