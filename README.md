@@ -1,6 +1,7 @@
 # RePEc-Python-Scripts
 Python scripts to work with data in ReDIF format
-http://econpapers.repec.org/software/rpcscript/
+
+(see here for related scripts https://ideas.repec.org/s/rpc/script.html)
 
 ## Requirements 
 1. Python 2.7: https://www.python.org/download/releases/2.7/ (pre-installed on on most Mac OS and Linux versions)
