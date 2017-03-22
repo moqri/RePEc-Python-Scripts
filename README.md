@@ -1,5 +1,5 @@
 # RePEc-Python-Scripts
-Python scripts to work with ReDIF format
+Python scripts to work with data in ReDIF format
 http://econpapers.repec.org/software/rpcscript/
 
 ## Requirements 
