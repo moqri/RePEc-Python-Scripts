@@ -20,11 +20,17 @@ Put your ReDIF file(s) in your local RePEc-Python-Scripts directory
 In a Command Line Terminal type 
 * python redif2jsonld.py
 
-## Convert ReDIF to Python DataFrame - Pandas (http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)
+## Convert ReDIF to Python DataFrame - Pandas 
+### Requirement 
+1. pandas (http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)
+
 In a Command Line Terminal type 
 * python redif2df.py
 
 ## Convert ReDIF to CSV Table
+### Requirement 
+1. pandas (http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)
+
 In a Command Line Terminal type 
 * python redif2csv.py
 
